@@ -1,0 +1,235 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 3.1 (25/3/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki 
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper, 11pt]{article}
+
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+%\usepackage{natbib} % Required to change bibliography style to APA
+\usepackage{amsmath} % Required for some math elements
+
+\usepackage[spanish, es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{enumerate}
+
+\usepackage{color}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+%\title{Sistema computacional de realidad aumentada para la enseñanza de sistemas físicos} % Title
+\title{
+		\normalfont \large \textsc{Pr\'acticas Profesionales} \\ [0.3cm]
+		%\textsc{\large Reporte Final}\\[0.5cm]
+		\HRule \\[0.3cm]
+		\Large \bfseries T\'itulo del Proyecto \\
+		\HRule \\[0.3cm]
+}
+\author{\large \textsc{Reporte Final}} % Author name
+\date{\large {Mayo 2015}} % Date for the report
+
+
+
+\begin{document}
+
+\maketitle % Insert the title, author and date
+
+%\input{./title.tex}
+
+\begin{center}
+%
+% Author and supervisor
+%\noindent
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushleft} \large
+\emph{Estudiante:}\\
+Br.~Pedro \textsc{Pérez Pérez}\\[0.3cm]
+\emph{Responsable:}\\
+Dra.~Anabel \textsc{Martín González}\\[0.3cm]
+%Universidad Autónoma de Yucatán - Facultad de Matemáticas\\
+
+{\footnotesize 
+Licenciatura en Ingeniería en Computación\\
+Facultad de Matemáticas\\
+Universidad Autónoma de Yucatán\\
+%Apartado Postal 172, 97119, Mérida, Yucatán, México\\
+%Tel. y Fax: +52 (999) 942 31 40\\
+%email: ppp@xxx.xx%\\[0.3cm]
+}
+%\end{flushleft}
+%\end{minipage}%
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushright} \large
+
+%\emph{Colaborador:} \\
+%Dr.~Arturo \textsc{Espinosa Romero}\\
+%Universidad Autónoma de Yucatán - Facultad de Matemáticas\\
+%email: eromero@uady.mx
+
+
+%\end{flushright}
+%\end{minipage}
+%
+%\vfill
+%
+% Bottom of the page
+%{\large \today}
+\end{center}
+
+\vspace{0.5cm}
+
+%\begin{center}
+%\begin{tabular}{l r}
+%Fecha: & Enero 1, 2014 \\ % Date the experiment was performed
+%Colaborador: & Arturo Espinosa Romero \\ % Partner names
+%& Mary Smith \\
+%Instructor: & Professor Smith % Instructor/supervisor
+%\end{tabular}
+%\end{center}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	RESUMEN
+%----------------------------------------------------------------------------------------
+%
+\begin{abstract}
+ Resumen del trabajo. El resumen puede iniciar con un enunciado acerca del problema a resolver y su importancia. Debe contener un enunciado que resuma el objetivo del trabajo. Además un enunciado breve de los resultados obtenidos (no necesariamente numéricos, pueden ser sólo con palabras). Debe finalizar con un párrafo que indique el impacto de la solución o método propuesto. El resumen debe constar de máximo dos párrafos (de preferencia uno solo) y tener un aproximado de entre 100 y 150 palabras.
+\end{abstract}
+
+
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCCION
+%----------------------------------------------------------------------------------------
+%
+\section{Introducción}
+La introducción inicia con un un enunciado que hable acerca de la importancia y el impacto del tema a tratar o el problema a resolver.
+
+Se continúa con un párrafo acerca de trabajos relacionados al tema desarrollado (trabajos previos o estado del arte). Aquí es donde van varias referencias bibliográficas, como \cite{Lee2012}, \cite{Fjeld2002} y \cite{Zhou2008}. Se espera que el reporte tenga entre 15 y 30 referencias bibliográficas provenientes de artículos de revistas científicas, libros, tesis y artículos de congresos. Los enlaces de páginas web también pueden ser parte de la bibliografía pero únicamente cuando se refieren a enlaces a bases de datos, código fuente o información que no puede ser tomada de artículos de revistas como datos gubernamentales (INEGI, INE, CFE, etc.) y de organizaciones mundiales (ONU, WHO).
+
+Después de mencionar los trabajo relacionados, se agrega un párrafo con la descripción del objetivo del sistema propuesto. Por ejemplo: Ya que los trabajos previos no poseen resuelven tal y tal cosa, el objetivo de este proyecto es diseñar y construir un sistema computacional que permita...
+
+Este proyecto propone...
+
+La introducción finaliza con un enunciado de organización del reporte. Ejemplo: En este reporte, se detalla... , se describe... y, finalmente, se presentan los resultados del desarrollo científico.
+
+
+
+%----------------------------------------------------------------------------------------
+%	CONCEPTOS, TEORIAS Y ALGORITMOS UTILIZADOS
+%----------------------------------------------------------------------------------------
+%
+\section{Marco Teórico}
+\label{sec:marcteo}
+
+En el marco teórico se describen todos los métodos existentes utilizados (no la metodología nueva desarrollada o propuesta). Las técnicas de procesamiento de imágenes utilizadas y que son conocidas en la literatura, se describen aquí. El equipo de hardware especializado que no se desarrolló pero se utilizó (sensores, robots, dispositivos hápticos, etc.) se detallan aquí.
+Aquí van referencias bibliográficas de donde se tomó la información de los métodos existentes. Como ejemplo \cite{RedBook}.
+
+
+
+%----------------------------------------------------------------------------------------
+%	METODOS
+%----------------------------------------------------------------------------------------
+%
+\section{Metodología}
+\label{metod}
+
+En la sección de metodología se describen, de manera extensa, todos los módulos de los que consta el sistema o algoritmo desarrollado. Así como la descripción de la configuración del sistema, sus partes, su interconexión, sus bibliotecas, piezas de hardware, etc.
+
+%\subsection{Sujetos}
+
+%\subsection{Diseño del experimento}
+
+
+
+%----------------------------------------------------------------------------------------
+%	RESULTADOS
+%----------------------------------------------------------------------------------------
+%
+\section{Resultados}
+\label{res}
+Los resultados del sistema.
+
+
+
+%----------------------------------------------------------------------------------------
+%	DISCUSION
+%----------------------------------------------------------------------------------------
+%
+\section{Discusión}
+\label{disc}
+En esta sección se presentan las observaciones encontradas en los resultados, así como, puntualizaciones que son importantes decir. Describir las ventajas y beneficios del sistema desarrollado.
+
+
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSIONES
+%----------------------------------------------------------------------------------------
+%
+\section{Conclusiones}
+\label{conc}
+
+La sección de conclusiones es prácticamente como las del resumen, sólo que con otras palabras y un poco más extenso. 
+
+
+%----------------------------------------------------------------------------------------
+%	APENDICES
+%----------------------------------------------------------------------------------------
+%
+\section*{Apéndices}
+\subsection{Manual del Usuario}
+
+Aquí va la descripción de cómo utilizar el sistema (cómo le explicarías a alguien que por primera vez va a utilizar el sistema).
+
+\subsection{Manual Técnico}
+
+Aquí va la descripción de la configuración técnica necesaria para que el software pueda ser ejecutado; por ejemplo los paquetes de software a instalar, el software a intalar, y cualquier otra cosa técnica.
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAFIA
+%----------------------------------------------------------------------------------------
+%
+%Con este comando se define el estilo de bibliografía.
+%\bibliographystyle{apalike}
+\bibliographystyle{abbrv}
+%En este comando se especifica el archivo de donde tomar las referencias citadas (archivo .bib)
+\bibliography{bibsample}
+
+%----------------------------------------------------------------------------------------
+
+
+\end{document}
